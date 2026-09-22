@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sam Ruttgaizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav class="nav-links">
+      <a href="index.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" style="padding-top: 64px;">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <div class="rule"></div>
+    </div>
+
+    <!-- Memorial Medtech: Smart Knee Sleeve -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/medtech-wearable.jpg" alt="Smart knee sleeve wearable harness with EMG electrodes"></div>
+        <div class="carousel-slide"><img src="Images/Projects/medtech-pcb.jpg" alt="ESP32 sensor PCB for the smart knee sleeve"></div>
+        <div class="carousel-slide"><img src="Images/Projects/medtech-championship-trophy.jpg" alt="Memorial Medtech team with the True North Biomedical Competition championship trophy"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Smart Knee Sleeve — ACL Rehab Wearable</h3>
+          <span class="status complete">Complete — 1st place, 2026 True North Biomedical Competition</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag"><img src="Images/Projects/medtech-logo.png" alt="Memorial Medtech">Memorial Medtech</span>
+        </div>
+        <p class="desc">
+          A wearable rehabilitation device for ACL recovery that combines EMG and IMU sensing to
+          track muscle activation and joint movement in real time, paired with a physiotherapist-facing dashboard.
+          I am leading the software subteam on the 23-member interdisciplinary team.
+        </p>
+        <ul class="bullet-list">
+          <li>Led embedded firmware development on ESP32 for real-time EMG/IMU acquisition and muscle activation tracking</li>
+          <li>Used FreeRTOS to manage concurrent sensor sampling, BLE transmission, and logging tasks, with BLE optimized to stream 6-channel EMG readings at 2kHz alongside real-time knee angle for physiotherapy monitoring</li>
+          <li>Directed development of a physiotherapist dashboard visualizing patient rehabilitation data</li>
+          <li>Simulated and validated the EMG front-end circuit in PSPICE before PCB layout to optimize signal quality and minimize noise</li>
+          <li>Coordinated with mechanical, electrical, and biomechanics sub-teams to align sensor outputs with clinical usability needs</li>
+          <li>Managed technical direction and delivery timelines for the software team</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">MCU</span><span class="v">ESP32</span></div>
+          <div class="spec"><span class="k">Sensing</span><span class="v">EMG, IMU, ROM</span></div>
+          <div class="spec"><span class="k">Result</span><span class="v">1st / 10 universities, 140+ participants</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Memorial Medtech: Emergency Triage Device -->
+    <article class="sheet">
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Wrist-Worn Emergency Triage Device</h3>
+          <span class="status active">Active</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag"><img src="Images/Projects/medtech-logo.png" alt="Memorial Medtech">Memorial Medtech</span>
+        </div>
+        <p class="desc">
+          A portable, wrist-worn triage device applying PPG sensing to determine heart rate, rhythm, and SpO2, with
+          machine learning used to estimate blood pressure.
+        </p>
+        <ul class="bullet-list">
+          <li>Leading development of the device's sensing and software stack from the ground up, following on from the team's 1st-place knee sleeve project</li>
+          <li>Applying PPG sensing to derive heart rate, rhythm, and SpO2 in a compact wrist-worn form factor</li>
+          <li>Developing a machine learning approach to estimate blood pressure from PPG-derived signals</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">Sensing</span><span class="v">PPG</span></div>
+          <div class="spec"><span class="k">Derived vitals</span><span class="v">Heart rate, rhythm, SpO2, blood pressure (ML)</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- MUNSTAR-1: UHF Radio + I2C Comms -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/i2c-gnss-board.jpg" alt="Pumpkin GNSS receiver used on MUNSTAR-1"></div>
+        <div class="carousel-slide"><img src="Images/Projects/i2c-block-diagram.jpg" alt="MUNSTAR-1 onboard computer interconnect block diagram"></div>
+        <div class="carousel-slide"><img src="Images/Projects/munstar1-flatsat.jpg" alt="MUNSTAR-1 FlatSat testbed with Z7000 onboard computer, EPS, and subsystem slots"></div>
+        <div class="carousel-slide"><img src="Images/Projects/munstar1-sdr-testbench.jpg" alt="Software-defined radio test bench used for UHF radio link validation"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>MUNSTAR-1 Satellite — UHF Radio &amp; I2C Subsystem Comms</h3>
+          <span class="status complete">Complete — flight software, C-CORE</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag"><img src="Images/Projects/munstar1-logo.jpg" alt="MUNSTAR-1">MUNSTAR-1 / C-CORE</span>
+        </div>
+        <p class="desc">
+          Built the end-to-end UHF radio communication system and the I2C hardware-abstraction layer linking
+          MUNSTAR-1's onboard computer (Zynq-7000 SoC) to the Electrical Power System and GPS receiver.
+        </p>
+        <ul class="bullet-list">
+          <li>Built an end-to-end UHF radio communication system in C/Python, achieving a bit error rate &lt; 0.001%</li>
+          <li>Developed the radio state machine in PlantUML and Cogent for error handling and recovery during data transmission</li>
+          <li>Wrote a C hardware-abstraction layer over Xilinx <code>iicps</code> polled I2C drivers, with error translation</li>
+          <li>Implemented the command/response protocol for the ISISpace ICEPS2 EPS (STID/IVID/CC/BID framing, telemetry parsing)</li>
+          <li>Validated the bus at the signal level with a Saleae logic analyzer and functionally by decoding live EPS/GPS telemetry over serial</li>
+          <li>Designed a prototype SolidWorks mounting bracket for an Earth-facing ADCS camera</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">OBC SoC</span><span class="v">Xilinx Zynq-7000</span></div>
+          <div class="spec"><span class="k">Buses</span><span class="v">I2C (400kHz), UART, RS-485, CAN</span></div>
+          <div class="spec"><span class="k">Radio BER</span><span class="v">&lt; 0.001%</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Documents/MUNSTAR-1 I2C Report.pdf">I2C Report →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- NeuroPoly: QSM Pipeline -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/qsm-pipeline.jpg" alt="Phase unwrapping and B0 field mapping pipeline for spinal cord MRI"></div>
+        <div class="carousel-slide"><img src="Images/Projects/qsm-dipole-inversion-comparison.jpg" alt="Comparison of thresholded k-space division, closed form, and MEDI dipole inversion methods with CNR values"></div>
+        <div class="carousel-slide"><img src="Images/Projects/qsm-mvf-mwf-coregistration.jpg" alt="Myelin volume fraction histology and myelin water fraction maps coregistered to MRI magnitude reference"></div>
+        <div class="carousel-slide"><img src="Images/Projects/qsm-correlation-matrix.jpg" alt="Pairwise Pearson correlation matrix between susceptibility separation methods and histology, WM tract mask ROI-wise"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Quantitative Susceptibility Mapping Pipeline — Spinal Cord Imaging</h3>
+          <span class="status complete">Complete — co-op research deliverable</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag no-icon">Polytechnique Montréal / NeuroPoly</span>
+        </div>
+        <p class="desc">
+          A 2D MRI post-processing pipeline that separates ex vivo spinal cord tissue susceptibility into iron
+          (paramagnetic) and myelin (diamagnetic) components and benchmarks the result against histology,
+          extending a technique well established in the brain into the comparatively unexplored spinal cord.
+        </p>
+        <ul class="bullet-list">
+          <li>Built the full QSM chain: phase unwrapping, background field removal, dipole inversion, but adapted brain-optimized MATLAB toolboxes (SEPIA, STI-Suite) to single-slice ex vivo data</li>
+          <li>Implemented and tuned a 2D V-SHARP background-field removal method, improving CNR from 0.328 to 1.083</li>
+          <li>Compared three dipole-inversion methods (TKD, closed-form L2, MEDI) and optimized the TKD threshold for contrast</li>
+          <li>Applied two susceptibility source-separation algorithms (χ-separation, ANISO-QSM) plus myelin water fraction mapping with Otsu-thresholded T2 cutoff</li>
+          <li>Built a custom co-registration pipeline (Spinal Cord Toolbox + ANTs) to align histology and MWF maps to the MRI reference space</li>
+          <li>Validated statistically against histology: MWF vs. myelin volume fraction correlated at r = 0.97 (ROI-wise); ANISO-QSM outperformed χ-separation (r = 0.64–0.66 vs. 0.39–0.40) against myelin ground truth</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">Toolchain</span><span class="v">MATLAB (SEPIA, STI-Suite), Python, SCT, ANTs</span></div>
+          <div class="spec"><span class="k">Acquisitions</span><span class="v">meGRE (8 echo), MESE (32 echo)</span></div>
+          <div class="spec"><span class="k">Result</span><span class="v">r = 0.64–0.66, p &lt; 0.05 vs. histology</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Documents/QSM Spinal Cord Report.pdf">Work Term Report →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Automated Analytical Balance -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/balance-hero-weight.jpg" alt="Automated analytical balance measuring a 200 gram calibration weight"></div>
+        <div class="carousel-slide"><img src="Images/Projects/balance-full-system.jpg" alt="Full automated balance system on the bench"></div>
+        <div class="carousel-slide"><img src="Images/Projects/balance-calibration-plot.jpg" alt="Piecewise linear calibration curve mapping motor steps to grams"></div>
+        <div class="carousel-slide"><img src="Images/Projects/balance-breadboard-internals.jpg" alt="Internal breadboard view showing the sensor conditioning circuit, TMC2209 driver, and Arduino Nano ESP32"></div>
+        <div class="carousel-slide"><img src="Images/Projects/balance-cad-beam.jpg" alt="CAD render of the balance beam and counterweight rail"></div>
+        <div class="carousel-slide"><img src="Images/Projects/balance-cad-stepper-mount.jpg" alt="CAD render of the stepper mount bracket"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Automated Analytical Balance</h3>
+          <span class="status complete">Complete — personal / course project</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag no-icon">Sensors &amp; Instrumentation · Solo Project</span>
+        </div>
+        <p class="desc">
+          A closed-loop optical balance for the 50–500g range: an IR emitter/dual-photodiode sensor detects beam
+          displacement, and a stepper-driven counterweight is servoed to the balance point by a tuned PID loop
+          running on an ESP32.
+        </p>
+        <ul class="bullet-list">
+          <li>Designed the optical sensing stage: IR emitter, dual photodiodes, transimpedance + instrumentation amplifier signal conditioning</li>
+          <li>Iterated sensor gain empirically (TIA feedback resistor, INA gain) to trade off sensitivity vs. usable travel range</li>
+          <li>Drove a NEMA 11 stepper via a TMC2209 driver at 1/128 microstepping (1.28M positions over 100mm travel), using UART stall detection for self-calibrating zero-reference homing</li>
+          <li>Implemented a PID control loop converting sensor voltage error into stepper frequency, with a low-pass filtered derivative term to damp oscillation</li>
+          <li>Calibrated with a piecewise-linear steps-to-grams mapping from scientific reference weights</li>
+          <li>Achieved ±5g accuracy across the operating range, ±3g repeatability, and negligible drift over a 10-minute stability test</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">MCU</span><span class="v">Arduino Nano ESP32</span></div>
+          <div class="spec"><span class="k">Driver</span><span class="v">TMC2209, 1/128 microstepping</span></div>
+          <div class="spec"><span class="k">Accuracy</span><span class="v">±5g across 50–500g</span></div>
+          <div class="spec"><span class="k">Response</span><span class="v">8–20s depending on load</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Documents/Analytical Balance Report.pdf">Design Report →</a>
+          <a href="https://github.com/sruttgaizer/automated_balance">GitHub →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Heart Rate Monitor -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/hrm-enclosure.jpg" alt="Assembled analog heart rate monitor enclosure with LED indicators"></div>
+        <div class="carousel-slide"><img src="Images/Projects/hrm-post-activity-waveform.jpg" alt="Oscilloscope capture of system output after physical activity (Figure 15.9)"></div>
+        <div class="carousel-slide"><img src="Images/Projects/hrm-breadboard.jpg" alt="Breadboard prototype of the analog signal conditioning chain"></div>
+        <div class="carousel-slide"><img src="Images/Projects/hrm-cad-enclosure.jpg" alt="CAD render of the heart rate monitor enclosure with HI/LO/RATE indicator labels"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Analog Optical Heart Rate Monitor</h3>
+          <span class="status complete">Complete — team project</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag no-icon">Electronic Circuits II · Team of 4</span>
+        </div>
+        <p class="desc">
+          A fully analog, microcontroller-free photoplethysmography heart rate monitor: an IR LED/phototransistor
+          sensor feeds a multi-stage op-amp chain that filters, amplifies, and thresholds the pulse signal to drive
+          real-time high/low BPM alarms. I developed the enclosure and contributed to full-team circuit validation.
+        </p>
+        <ul class="bullet-list">
+          <li>Built a 6-stage analog conditioning chain (MCP6002 op-amps): DC removal + bias, low-pass filtering, amplification, AC re-coupling, comparator, and an NE555 monostable pulse shaper</li>
+          <li>Designed an RC frequency-to-voltage converter and dual-comparator threshold detection to drive high/low-BPM alarm LEDs</li>
+          <li>Diagnosed and fixed a buzzer current-draw fault by switching to LED indicators after the regulator couldn't supply 50mA under battery power</li>
+          <li>Designed and 3D-printed a battery-powered enclosure with a spring-loaded finger clamp and labeled indicator LEDs</li>
+          <li>Validated to within 3 BPM of an Apple Smart Watch across rest, activity, and recovery, with ≤6 BPM drift over a 6-hour stability test</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">Sensor</span><span class="v">LTE-302 IR LED / LTR-301 phototransistor</span></div>
+          <div class="spec"><span class="k">Signal chain</span><span class="v">MCP6002 op-amps, NE555 timer</span></div>
+          <div class="spec"><span class="k">Accuracy</span><span class="v">Within 3 BPM of reference</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Documents/Heart Rate Monitor Report.pdf">Design Report →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Battleship -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/Projects/battleship-breadboard.jpg" alt="Battleship controller breadboard with Arduino, joystick, and 7-segment display"></div>
+        <div class="carousel-slide"><img src="Images/Projects/battleship-in-box.jpg" alt="Battleship game presentation with breadboard controller"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Dual-Microprocessor Battleship</h3>
+          <span class="status complete">Complete — team project</span>
+        </div>
+        <div class="tags">
+          <span class="org-tag no-icon">Microprocessors &amp; Digital Logic · Team of 4</span>
+        </div>
+        <p class="desc">
+          A two-player, best-of-3 physical Battleship game built on two independent Arduino Uno controllers
+          communicating over UART, each with its own LED grid, joystick targeting, and a discrete-logic 7-segment
+          score display.
+        </p>
+        <ul class="bullet-list">
+          <li>Designed a dual-Arduino state machine (ship selection → shooting/idle → hit/miss → reset) synchronized over UART with a defined integer command set</li>
+          <li>Built a discrete combinational logic circuit (74HC08/74HC32/74HC04) to decode a 2-bit signal into 4 score patterns, minimized via Boolean algebra to reduce gate count</li>
+          <li>Implemented joystick cursor control with dead-zone/threshold logic and animated hit/miss LED feedback with buzzer tones</li>
+          <li>Diagnosed a nondeterministic behavior bug traced to 9V battery sag under load, confirmed via multimeter and swap testing</li>
+        </ul>
+        <div class="specs">
+          <div class="spec"><span class="k">MCUs</span><span class="v">2× Arduino Uno (ATmega328P)</span></div>
+          <div class="spec"><span class="k">Link</span><span class="v">UART, 9600 baud</span></div>
+          <div class="spec"><span class="k">Logic</span><span class="v">74HC08 / 74HC32 / 74HC04</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Documents/Battleship Report.pdf">Design Report →</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <footer id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-row">
+      <a href="mailto:sgruttgaizer@mun.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>Email →</a>
+      <a href="https://linkedin.com/in/sam-ruttgaizer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn →</a>
+      <a href="https://github.com/sruttgaizer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>GitHub →</a>
+    </div>
+    <p class="fine">© 2026 Sam Ruttgaizer.</p>
+  </footer>
+
+</main>
+
+<script src="site.js"></script>
+</body>
+</html>
